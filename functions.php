@@ -1,9 +1,9 @@
 <?php
 global $base_url, $image_dir;
-$base_url = 'localhost/starbook/';
+$base_url = 'mrizqi-final-project.southeastasia.cloudapp.azure.com/starbook/';
 $image_dir = 'images/';
 function pdo_connect_postgresql() {
-    $DATABASE_HOST = '4.193.113.8';
+    $DATABASE_HOST = 'mrizqi-final-project.southeastasia.cloudapp.azure.com';
     $DATABASE_PORT = '5432';
     $DATABASE_USER = 'postgres';
     $DATABASE_PASS = 'duhlupa';
