@@ -48,7 +48,7 @@ function save_image($folder_path, $image){
         $image_url = $base_url . 'images/' . $folder_path . basename($image["name"]); 
         return array(true, $image_url);
       } else {
-        return array(false, "Sorry, there was an error uploading your file.");
+        return array(false, "Error uploading file: " . $_FILES['image']['error']);
       }
 
 }
