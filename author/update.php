@@ -10,6 +10,7 @@ if (isset($_GET['id'])) {
             list($image_save_status, $message) = save_image("author/",$_FILES["photo"]);
             if ($image_save_status){
                 $photo_query = ', photo_url = \'' . $message . '\' ';
+                $image_save_status = false;
             };
         }
         $name = isset($_POST['name']) ? $_POST['name'] : '';
