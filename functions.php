@@ -1,6 +1,6 @@
 <?php
 global $base_url, $image_dir;
-$base_url = '4.193.113.8/starbook/';
+$base_url = 'localhost/starbook/';
 $image_dir = 'images/';
 function pdo_connect_postgresql() {
     $DATABASE_HOST = '4.193.113.8';
