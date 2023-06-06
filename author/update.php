@@ -53,7 +53,7 @@ if (isset($_GET['id'])) {
         </div>
         <div class="form-group mt-3" style="display: flex; flex-direction: column;">
             <label>Photo</label>
-            <img src="/starbook<?=$author['photo_url']?>" alt="Author Photo" class=".img-fluid w-25">
+            <img src="<?=$author['photo_url']?>" alt="Author Photo" class=".img-fluid w-25">
             <input name="photo" id="photo" placeholder="photo" class="form-control mt-1" type="file">
             <?php if (isset($image_save_status) && !$image_save_status): ?>
                 <div class="alert alert-danger mt-1" role="alert">

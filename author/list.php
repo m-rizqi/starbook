@@ -53,7 +53,7 @@ $num_authors = $pdo->query('SELECT COUNT(*) FROM author')->fetchColumn();
                 <td><?=$author['about']?></td>
                 <td><?=$author['email']?></td>
                 <td>
-                    <img src="<?=$author['photo_url']?>" alt="Author Photo" class="img-thumbnail">
+                    <img src="<?=$author['photo_url']?>" alt="Author Photo" class="img-thumbnail"/>
                 </td>
                 <td><?=$author['last_update']?></td>
                 <td>
