@@ -1,7 +1,7 @@
 <?php
 global $base_url, $image_dir;
 $base_url = '4.193.113.8/starbook/';
-$image_dir = 'images/';
+$image_dir = '/starbook/images/';
 function pdo_connect_postgresql() {
     $DATABASE_HOST = '4.193.113.8';
     $DATABASE_PORT = '5432';
@@ -45,7 +45,7 @@ function save_image($folder_path, $image){
 
     if (move_uploaded_file($image["tmp_name"], $image_file)) {
         global $base_url;
-        $image_url = $image_dir . $folder_path . basename($image["name"]); 
+        $image_url = $base_url . 'images/' . $folder_path . basename($image["name"]); 
         return array(true, $image_url);
       } else {
         return array(false, "Sorry, there was an error uploading your file.");
