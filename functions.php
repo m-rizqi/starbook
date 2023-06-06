@@ -21,7 +21,7 @@ function is_image_empty($image){
 function save_image($folder_path, $image){
     global $image_dir;
     $image_path = $image_dir . basename($image["name"]);
-    $image_file = '/' . $image_path;
+    $image_file = $image_path;
     $upload_ok = 1;
     $image_file_type = strtolower(pathinfo($image_file, PATHINFO_EXTENSION));
     
@@ -45,7 +45,7 @@ function save_image($folder_path, $image){
 
     if (move_uploaded_file($image["tmp_name"], $image_file)) {
         global $base_url;
-        $image_url = $image_dir . basename($image["name"]); 
+        $image_url = $$image_dir . basename($image["name"]); 
         return array(true, $image_url);
       } else {
         return array(false, "Error uploading file: " . $_FILES['image']['error']);
