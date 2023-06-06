@@ -1,12 +1,12 @@
 <?php
 global $base_url, $image_dir;
-$base_url = 'http://localhost/starbook-php/';
+$base_url = '4.193.113.8/starbook-php/';
 $image_dir = 'images/';
 function pdo_connect_postgresql() {
-    $DATABASE_HOST = 'localhost';
+    $DATABASE_HOST = '4.193.113.8';
     $DATABASE_PORT = '5432';
     $DATABASE_USER = 'postgres';
-    $DATABASE_PASS = 'root';
+    $DATABASE_PASS = 'duhlupa';
     $DATABASE_NAME = 'starbook';
     $OPTIONS = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
     try {
