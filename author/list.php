@@ -4,13 +4,11 @@ $pdo = pdo_connect_postgresql();
 
 $page = isset($_GET['page']) && is_numeric($_GET['page']) ? (int)$_GET['page'] : 1;
 $records_per_page = 10;
-
 $search = isset($_GET['search']) ? $_GET['search'] : '';
 $search_query = '';
 if(!empty($search)){
     $search_query = 'WHERE name LIKE \'%'.$search.'%\'';
 }
-
 $stmt = $pdo->prepare('SELECT * FROM author '.$search_query.' ORDER BY id LIMIT :record_per_page OFFSET :offset');
 $stmt->bindValue(':record_per_page', $records_per_page, PDO::PARAM_INT);
 $stmt->bindValue(':offset', ($page-1)*$records_per_page, PDO::PARAM_INT);
