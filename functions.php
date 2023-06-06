@@ -45,7 +45,7 @@ function save_image($folder_path, $image){
 
     if (move_uploaded_file($image["tmp_name"], $image_file)) {
         global $base_url;
-        $image_url = $base_url . $image_dir . $folder_path . basename($image["name"]); 
+        $image_url = $image_dir . $folder_path . basename($image["name"]); 
         return array(true, $image_url);
       } else {
         return array(false, "Sorry, there was an error uploading your file.");
